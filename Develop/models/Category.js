@@ -1,11 +1,12 @@
-const { Model, DataTypes } = require("sequelize");
-// Sets up connection to sequelize 
-const sequelize = require("../config/connection.js");
+const { Model, DataTypes } = require('sequelize');
+
+const sequelize = require('../config/connection.js');
 
 class Category extends Model {}
-// Model framework used in conjunction with category seed to initialize the data
+
 Category.init(
   {
+    // define columns
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -22,7 +23,7 @@ Category.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "category",
+    modelName: 'category',
   }
 );
 
